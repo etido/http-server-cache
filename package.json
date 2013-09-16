@@ -1,9 +1,28 @@
 {
   "name": "http-server-cache",
   "description": "http-server-cache",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "private": false,
   "dependencies": {
-    "express": "3.x"
+    "express": ""
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "main": "app.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/etido/http-server-cache.git"
+  },
+  "keywords": [
+    "memory-cache",
+    "node.js",
+    "express.js"
+  ],
+  "author": "Emanuele Tido",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/etido/http-server-cache/issues"
   }
 }
