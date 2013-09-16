@@ -1,7 +1,7 @@
 {
   "name": "http-server-cache",
   "description": "http-server-cache",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "private": false,
   "dependencies": {
     "express": "",
