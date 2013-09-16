@@ -54,7 +54,7 @@ app.get('*',[SetupRequest], function (req, res) {
 	else
 	{
 	res.contentType('application/json');
-    res.send('{"Error": null,"HasError": true,"ElapsedTime": ' + '"' + req.elapsedtime + ' ms"}');		
+    res.send('{"Error": "cache missed!","HasError": true,"ElapsedTime": ' + '"' + req.elapsedtime + ' ms"}');		
 	}
 });
 var serverPort=process.env.VCAP_APP_PORT || process.env.PORT || 3000;
