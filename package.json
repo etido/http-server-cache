@@ -1,10 +1,11 @@
 {
   "name": "http-server-cache",
   "description": "http-server-cache",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "private": false,
   "dependencies": {
-    "express": ""
+    "express": "",
+    "memory-cache": ""
   },
   "scripts": {
     "start": "node server.js"
