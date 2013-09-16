@@ -36,7 +36,8 @@ app.post('*',[SetupRequest,GetBodyRequest], function (req, res) {
 	var elapsed = ((diff[0] * 1e9) + diff[1]) / 1000000;
 	req.elapsedtime = elapsed.toFixed(precision);
 	req.starttime = process.hrtime(); // reset the timer   
-    res.end('{"Error": null,"HasError": false,"ElapsedTime": ' + '"' + req.elapsedtime + ' ms"}');
+	res.contentType('application/json');
+    res.send('{"Error": null,"HasError": false,"ElapsedTime": ' + '"' + req.elapsedtime + ' ms"}');
 });
 app.get('*',[SetupRequest], function (req, res) {
 	var key = req.query["key"];
@@ -47,13 +48,15 @@ app.get('*',[SetupRequest], function (req, res) {
 	req.elapsedtime = elapsed.toFixed(precision);
 	req.starttime = process.hrtime(); // reset the timer   
 	if (response!= undefined &&response!=null &&response !=''){
-    res.end(response);
+	res.contentType('application/json');
+    res.send(response);
 	}
 	else
 	{
-    res.end('{"Error": null,"HasError": true,"ElapsedTime": ' + '"' + req.elapsedtime + ' ms"}');		
+	res.contentType('application/json');
+    res.send('{"Error": null,"HasError": true,"ElapsedTime": ' + '"' + req.elapsedtime + ' ms"}');		
 	}
 });
-var serverPort=process.env.VCAP_APP_PORT || 3000;
+var serverPort=process.env.VCAP_APP_PORT || process.env.PORT || 3000;
 app.listen(serverPort);
 console.log('Listening on port '+serverPort);
