@@ -36,5 +36,5 @@ or
 
 ##Try the demo site : 
 <pre> 
-<a href="http://http-server-cache.eu01.aws.af.cm/?key=isitchristmas" title= "is it christmas" > Demo: get cache for isitchristmas key </a>
+<a href="http://http-server-cache.eu01.aws.af.cm/cache?key=isitchristmas" title="is it christmas">Demo: get cache for isitchristmas key</a>
 </pre>
