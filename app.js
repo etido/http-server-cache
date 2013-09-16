@@ -54,6 +54,6 @@ app.get('*',[SetupRequest], function (req, res) {
     res.end('{"Error": null,"HasError": true,"ElapsedTime": ' + '"' + req.elapsedtime + ' ms"}');		
 	}
 });
-var serverPort=process.env.PORT || 3000;
+var serverPort=process.env.VCAP_APP_PORT || 3000;
 app.listen(serverPort);
 console.log('Listening on port '+serverPort);
